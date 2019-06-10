@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		024E8B5222AE9D3B00B6A34D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024E8B5122AE9D3B00B6A34D /* AppDelegate.swift */; };
-		024E8B5422AE9D3B00B6A34D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024E8B5322AE9D3B00B6A34D /* ViewController.swift */; };
 		024E8B5722AE9D3B00B6A34D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 024E8B5522AE9D3B00B6A34D /* Main.storyboard */; };
 		024E8B5A22AE9D3B00B6A34D /* Sketchpad.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 024E8B5822AE9D3B00B6A34D /* Sketchpad.xcdatamodeld */; };
 		024E8B5C22AE9D3D00B6A34D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 024E8B5B22AE9D3D00B6A34D /* Assets.xcassets */; };
@@ -18,7 +17,6 @@
 /* Begin PBXFileReference section */
 		024E8B4E22AE9D3B00B6A34D /* Sketchpad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sketchpad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		024E8B5122AE9D3B00B6A34D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		024E8B5322AE9D3B00B6A34D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		024E8B5622AE9D3B00B6A34D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		024E8B5922AE9D3B00B6A34D /* Sketchpad.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Sketchpad.xcdatamodel; sourceTree = "<group>"; };
 		024E8B5B22AE9D3D00B6A34D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,7 +55,6 @@
 			isa = PBXGroup;
 			children = (
 				024E8B5122AE9D3B00B6A34D /* AppDelegate.swift */,
-				024E8B5322AE9D3B00B6A34D /* ViewController.swift */,
 				024E8B5522AE9D3B00B6A34D /* Main.storyboard */,
 				024E8B5B22AE9D3D00B6A34D /* Assets.xcassets */,
 				024E8B5D22AE9D3D00B6A34D /* LaunchScreen.storyboard */,
@@ -139,7 +136,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				024E8B5A22AE9D3B00B6A34D /* Sketchpad.xcdatamodeld in Sources */,
-				024E8B5422AE9D3B00B6A34D /* ViewController.swift in Sources */,
 				024E8B5222AE9D3B00B6A34D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
