@@ -10,28 +10,56 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Collection View Controller-->
+        <!--All Pictures Collection View Controller-->
         <scene sceneID="fLD-zD-4Br">
             <objects>
-                <collectionViewController id="CUl-ro-XdI" sceneMemberID="viewController">
+                <collectionViewController id="CUl-ro-XdI" customClass="AllPicturesCollectionViewController" customModule="Sketchpad" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="zvQ-Jo-YZG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ryd-67-vys">
-                            <size key="itemSize" width="50" height="50"/>
+                            <size key="itemSize" width="100" height="120"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" id="JD5-at-Z6q">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="PictureCell" id="JD5-at-Z6q" customClass="PictureCell" customModule="Sketchpad" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="100" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="120"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L9k-uW-LWr">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="4"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I7i-PV-UpG">
+                                            <rect key="frame" x="8" y="100" width="84" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20" id="4hB-ao-NZD"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </view>
+                                <constraints>
+                                    <constraint firstAttribute="trailingMargin" secondItem="I7i-PV-UpG" secondAttribute="trailing" id="0dS-MH-7HO"/>
+                                    <constraint firstItem="L9k-uW-LWr" firstAttribute="centerX" secondItem="I7i-PV-UpG" secondAttribute="centerX" id="24h-Jp-kqp"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="I7i-PV-UpG" secondAttribute="bottom" id="JrC-Go-aYC"/>
+                                    <constraint firstItem="L9k-uW-LWr" firstAttribute="top" secondItem="JD5-at-Z6q" secondAttribute="top" id="ZPb-WC-AGe"/>
+                                    <constraint firstItem="L9k-uW-LWr" firstAttribute="leading" secondItem="JD5-at-Z6q" secondAttribute="leading" id="g9j-Ev-CNU"/>
+                                    <constraint firstItem="I7i-PV-UpG" firstAttribute="leading" secondItem="JD5-at-Z6q" secondAttribute="leadingMargin" id="qYx-3I-2gJ"/>
+                                    <constraint firstItem="I7i-PV-UpG" firstAttribute="top" secondItem="L9k-uW-LWr" secondAttribute="bottom" id="tSU-ls-ce1"/>
+                                    <constraint firstAttribute="trailing" secondItem="L9k-uW-LWr" secondAttribute="trailing" id="uzj-Q0-D1b"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="imageView" destination="L9k-uW-LWr" id="n4g-Y5-q8k"/>
+                                    <outlet property="nameLabel" destination="I7i-PV-UpG" id="Skr-SV-ayv"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -87,7 +115,18 @@
                                     <color key="textColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="Title" id="Ptt-0N-y1D"/>
+                                    <navigationItem title="New Picture" id="Ptt-0N-y1D">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="save" id="Djj-RR-lod">
+                                            <connections>
+                                                <action selector="saveTapped:" destination="kaP-bI-jHv" id="wjS-lb-3Zr"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="n4P-iA-W4F">
+                                            <connections>
+                                                <action selector="deleteTapped:" destination="kaP-bI-jHv" id="vyS-DI-AqM"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2P2-eP-tj8">
@@ -158,6 +197,7 @@
                     </view>
                     <connections>
                         <outlet property="imageView" destination="wKf-dS-qFl" id="qeF-PP-21y"/>
+                        <outlet property="stackView" destination="MBi-ET-lOE" id="khl-Jv-QFw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kyN-22-TgJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
