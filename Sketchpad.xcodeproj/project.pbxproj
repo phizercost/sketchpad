@@ -12,6 +12,7 @@
 		024E8B5A22AE9D3B00B6A34D /* Sketchpad.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 024E8B5822AE9D3B00B6A34D /* Sketchpad.xcdatamodeld */; };
 		024E8B5C22AE9D3D00B6A34D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 024E8B5B22AE9D3D00B6A34D /* Assets.xcassets */; };
 		024E8B5F22AE9D3D00B6A34D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 024E8B5D22AE9D3D00B6A34D /* LaunchScreen.storyboard */; };
+		028D8DFA22B77F2E0001313E /* DrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028D8DF922B77F2E0001313E /* DrawingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		024E8B5B22AE9D3D00B6A34D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		024E8B5E22AE9D3D00B6A34D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		024E8B6022AE9D3D00B6A34D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		028D8DF922B77F2E0001313E /* DrawingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				024E8B5122AE9D3B00B6A34D /* AppDelegate.swift */,
 				024E8B5522AE9D3B00B6A34D /* Main.storyboard */,
+				028D8DF922B77F2E0001313E /* DrawingViewController.swift */,
 				024E8B5B22AE9D3D00B6A34D /* Assets.xcassets */,
 				024E8B5D22AE9D3D00B6A34D /* LaunchScreen.storyboard */,
 				024E8B6022AE9D3D00B6A34D /* Info.plist */,
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				024E8B5A22AE9D3B00B6A34D /* Sketchpad.xcdatamodeld in Sources */,
+				028D8DFA22B77F2E0001313E /* DrawingViewController.swift in Sources */,
 				024E8B5222AE9D3B00B6A34D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
